@@ -5,6 +5,7 @@
  */
 package nura;
 
+import java.awt.Dimension;
 import javax.swing.JFrame;
 
 /**
@@ -19,7 +20,11 @@ public class AddFrame extends javax.swing.JFrame {
         initComponents();
         this.parent = parent;
         this.setLocation(parent.getLocation());
-        this.setResizable(false);
+        
+    }
+
+    private AddFrame() {
+        initComponents();
     }
 
     /**
@@ -42,8 +47,7 @@ public class AddFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(800, 500));
-        setMinimumSize(new java.awt.Dimension(810, 510));
-        setPreferredSize(new java.awt.Dimension(800, 500));
+        setMinimumSize(new java.awt.Dimension(800, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(249, 246, 222));
@@ -88,15 +92,15 @@ public class AddFrame extends javax.swing.JFrame {
         });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(472, 407, 133, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/новый_рецепт1.gif"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/новый_рецепт.gif"))); // NOI18N
         jLabel2.setMaximumSize(new java.awt.Dimension(800, 500));
         jLabel2.setMinimumSize(new java.awt.Dimension(800, 500));
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/кухня_размытая.jpg"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, -1, 560));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 833, 535));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -142,7 +146,7 @@ public class AddFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                //new AddFrame().setVisible(true);
+                new AddFrame().setVisible(true);
             }
         });
     }
